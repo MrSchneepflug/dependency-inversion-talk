@@ -1,0 +1,676 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Jest vs. Enzyme - Overview</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/solarized.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <style type="text/css">
+            ul {
+                list-style-type: none !important;
+                margin: 0 !important;
+            }
+
+            ul.map {
+                position: relative;
+                top: 32px;
+                width: 100%;
+                font-size: 0.6em;
+                display: table;
+            }
+
+            ul.map li {
+                display: table-cell;
+                line-height: 2;
+            }
+
+            .header {
+                width: 100%;
+                display: flex;
+            }
+
+            .header-item {
+                width: 50%;
+            }
+
+            .compare-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .compare-jest-vs-enzyme ul {
+                text-align: center;
+                margin: 0;
+            }
+
+            .compare-item {
+                width: 33%;
+                text-align: center;
+                background-color: #fdf6e3;
+            }
+
+            .brand-icon {
+                width: 100px;
+                height: 100px;
+                border: 0 !important;
+                mix-blend-mode: multiply;
+            }
+
+            code {
+                font-size: 1.5em !important;
+                line-height: 1.2em !important;
+            }
+
+            .check-green {
+                color: #008020;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="center">
+                    <h1>Jest vs. Enzyme</h1>
+                    <h2>Overview</h2>
+                    <p>&nbsp;</p>
+                    <p>Johannes Jambor, Developer @SilverTours GmbH</p>
+                    <ul class="fa-ul">
+                        <li style="list-style: none;"><a href="mailto:jambor@billiger-mietwagen.de"><i class="fa-li fa fa-envelope-o" aria-hidden="true"></i>&nbsp;jambor@billiger-mietwagen.de</a></li>
+                        <li style="list-style: none;"><a href="https://github.com/MrSchneepflug"><i class="fa-li fa fa-github" aria-hidden="true"></i>&nbsp;Mr. Schneepflug</li></a>
+                    </ul>
+                </section>
+
+                <section class="center">
+                    <div class="compare-container">
+                        <div class="compare-item">
+                            <h2>Jest</h2>
+                            <ul>
+                                <li class="fragment fade-up" style="text-align: center;"><strong>Test-Framework for <br>JavaScript-Applications</strong></li>
+                                <li class="fragment fade-up" style="text-align: center;">
+                                    <img src="images/facebook.png" class="plain brand-icon">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="compare-item">
+                            <h2>Enzyme</h2>
+                            <ul>
+                                <li class="fragment fade-up" style="text-align: center;"><strong>Test-Utility for <br>React-Applications</strong></li>
+                                <li class="fragment fade-up" style="background-color: #fdf6e3; text-align: center;">
+                                    <img src="images/airbnb.png" class="plain brand-icon">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="center">
+                    <h2>Jest</h2>
+
+                    <section>
+                        <ul style="text-align: center;">
+                            <li class="fragment fade-up">Test Runner</li>
+                            <li class="fragment fade-up">Expectation-Library</li>
+                            <li class="fragment fade-up">Mock-Library</li>
+                            <li class="fragment fade-up">Coverage-Support</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Jest</h2>
+                        </div>
+                        <div class="header-item">
+                            <ul class="map">
+                                <li><i class="fa fa-circle"></i> Test Runner</li>
+                                <li><i class="fa fa-circle-o"></i> Expectation-Library</li>
+                                <li><i class="fa fa-circle-o"></i> Mock-Library</li>
+                                <li><i class="fa fa-circle-o"></i> Coverage-Support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Demo</h3>
+                        <img class="plain fragment fade-up" src="images/npm-run-test.gif">
+                    </section>
+
+                    <section>
+                        <h3>Usage</h3>
+                        <img class="plain" src="images/jest-usage.png">
+                    </section>
+
+                    <section>
+                        <h3>File-Filter</h3>
+                        <img class="plain fragment fade-up" src="images/file-filter-usage.gif">
+                    </section>
+
+                    <section>
+                        <h3>Test-Filter</h3>
+                        <img class="plain fragment fade-up" src="images/test-filter-usage.gif">
+                    </section>
+
+                    <section>
+                        <h3>Environment</h3>
+                        <pre style="width: 80%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+                        describe("Some component", () => {
+                          it('will do some fancy stuff', () => {
+
+                          });
+                        });
+                    </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Environment</h3>
+                        <pre style="width: 80%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+                        <span style="background-color: #0000FF;">describe</span>("Some component", () => {
+                          <span style="background-color: #0000FF;">it</span>('will do some fancy stuff', () => {
+
+                          });
+                        });
+                    </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Environment</h3>
+                        <pre style="width: 80%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+                        import React from "react";
+                        import { configure } from "enzyme";
+                        import Adapter from "enzyme-adapter-react-15";
+                        import jestMock from "jest-mock";
+                        import {
+                          shallowWithIntl,
+                          mountWithIntl
+                        } from "../helpers/create-component-with-intl";
+                        import BackToTopButton from "../../components/back-to-top-button";
+                        import { ArrowTopIcon } from "react-components";
+
+                        describe("Some component", () => {
+                          it('will do some fancy stuff', () => {
+
+                          });
+                        });
+                    </code></pre>
+                    </section>
+
+
+                    <section>
+                        <h3>Environment</h3>
+                        <pre style="width: 80%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+                        npm
+                         \_ sh -c react-scripts test --env=jsdom
+                          \_ node /code/node_modules/.bin/react-scripts test --env=jsdom
+                           \_ node /code/node_modules/react-scripts/scripts/test.js --env=jsdom
+                            \_ node /code/node_modules/worker-farm/lib/child/index.js <span class="fragment fade-up" style="color: #FF0000;"><strong>$TEST1</strong></span>
+                            \_ node /code/node_modules/worker-farm/lib/child/index.js <span class="fragment fade-up" style="color: #00FF00;"><strong>$TEST2</strong></span>
+                    </code></pre>
+
+                    <small>simplified output ...</small>
+                    </section>
+
+                    <section>
+                        <h3>Alternatives</h3>
+
+                        <div class="compare-container">
+                            <div class="compare-item">
+                                <img class="plain fragment fade-up" src="images/jasmine.png" style=" mix-blend-mode: multiply !important;"/>
+                                <br>
+                                <a class="fragment fade-up" href="https://jasmine.github.io/">https://jasmine.github.io/</a>
+                            </div>
+                            <div class="compare-item">
+                                <img class="plain fragment fade-up" src="images/mocha.png"  style=" mix-blend-mode: multiply !important;"/>
+                                <br>
+                                <a class="fragment fade-up" href="https://mochajs.org/">https://mochajs.org/</a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Jest</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Test Runner</li>
+                                <li><i class="fa fa-circle"></i> Expectation-Library</li>
+                                <li><i class="fa fa-circle-o"></i> Mock-Library</li>
+                                <li><i class="fa fa-circle-o"></i> Coverage-Support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Example</h3>
+
+                        <pre style="width: 50%;"><code class="lang-javascript hljs" data-trim data-noescape>
+                            describe("Some component", () => {
+                              it('will do some fancy stuff', () => {
+                                <span class="fragment fade-right">expect(someResult).toBe(true);</span>
+                              });
+                            });
+                        </code></pre>
+
+                        <span class="fragment fade-right">
+                            <a href="https://facebook.github.io/jest/docs/en/expect.html" target="_blank">
+                                https://facebook.github.io/jest/docs/en/expect.html
+                            </a>
+                        </span>
+                    </section>
+
+                    <section>
+                        <h3>Snapshots</h3>
+
+                        <pre style="width: 50%"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+import React from 'react';
+import renderer from 'react-test-renderer';
+<div class="fragment fade-up" data-fragment-index="1">
+const SilverTours = () => {
+  return &lt;div>SilverTours&lt;/div>
+};
+</div>
+<span class="fragment fade-up" data-fragment-index="2">describe("Snapshot Example", () => {</span>
+  <span class="fragment fade-up" data-fragment-index="3">it('will match snapshot', () => {</span>
+<div class="fragment fade-up" data-fragment-index="4">
+    const tree = renderer.create(
+      &lt;SilverTours/>
+    ).toJSON();
+</div><div class="fragment fade-up" data-fragment-index="5">
+    expect(tree).toMatchSnapshot();
+</div>
+  <span class="fragment fade-up" data-fragment-index="3">});</span>
+<span class="fragment fade-up" data-fragment-index="2">});</span>
+                        </code></pre>
+
+                    </section>
+
+					<section>
+						<h3>Snapshots</h3>
+
+<pre style="width: 60%"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+exports[`Snapshot Example will match snapshot 1`] = `
+&lt;div>
+  Silvertours
+&lt;/div>
+`;
+</code></pre>
+					</section>
+
+					<section>
+						<h3>Snapshots</h3>
+
+						<img class="plain" src="images/snapshot-fail.png">
+
+					</section>
+
+                    <section>
+                        <h3>Snapshots</h3>
+
+                        <pre style="width: 60%"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+exports[`Snapshot Example will match snapshot 1`] = `
+&lt;div>
+  Silvertours
+&lt;/div>
+`;
+</code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Snapshots</h3>
+
+                        <pre style="width: 60%"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+exports[`Snapshot Example will match snapshot 1`] = `
+<span style="background-color: #0000FF;">&lt;span></span>
+  Silvertours
+<span style="background-color: #0000FF;">&lt;/span></span>
+`;
+</code></pre>
+                        <div class="fragment fade-up">
+                            Rogelio Guzman - Jest Snapshots and Beyond - React Conf 2017
+                            <br>
+                            <a href="https://www.youtube.com/watch?v=HAuXJVI_bUs">https://www.youtube.com/watch?v=HAuXJVI_bUs</a>
+                        </div>
+
+                    </section>
+
+                    <section>
+                        <h3>Alternatives</h3>
+
+                        <div class="compare-container">
+                            <div class="compare-item">
+                                <img class="plain fragment fade-up" src="images/chai.png" style=" mix-blend-mode: multiply !important;"/>
+                                <br>
+                                <a class="fragment fade-up" href="http://chaijs.com/">http://chaijs.com/</a>
+                            </div>
+                            <div class="compare-item">
+                                <img class="plain fragment fade-up" src="images/should.png"/>
+                                <br>
+                                <a class="fragment fade-up" href="https://shouldjs.github.io/">https://shouldjs.github.io/</a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Jest</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Test Runner</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Expectation-Library</li>
+                                <li><i class="fa fa-circle"></i> Mock-Library</li>
+                                <li><i class="fa fa-circle-o"></i> Coverage-Support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Example</h3>
+
+                            <pre style="width: 70%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+<span class="fragment fade-up" data-fragment-index="1">const apply = (collection, callback) => {</span>
+  <span class="fragment fade-up" data-fragment-index="2">for (let index = 0; index < collection.length; index++) {</span>
+    <span class="fragment fade-up" data-fragment-index="3">callback(collection[index]);</span>
+  <span class="fragment fade-up" data-fragment-index="2">}</span>
+<span class="fragment fade-up" data-fragment-index="1">};</span>
+                            </code></pre>
+
+                        <div class="fragment fade-up">
+                            <pre style="width: 50%;"><code class="lang-javascript hljs" data-trim data-noescape>
+                                <span class="fragment fade-up">const mockCallback = jest.fn();</span>
+                                <span class="fragment fade-up">apply([0,1], mockCallback);</span>
+
+                                <span class="fragment fade-up">expect(mockCallback.mock.calls.length).toBe(2);</span>
+                                <span class="fragment fade-up">expect(mockCallback.mock.calls[0][0]).toBe(0);</span>
+                                <span class="fragment fade-up">expect(mockCallback.mock.calls[1][0]).toBe(1);</span>
+                            </code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Alternatives</h3>
+
+                        <div style="background-color: #fdf6e3;">
+                            <img class="plain fragment fade-up" src="images/sinon.png" style="mix-blend-mode: multiply !important;">
+                            <br>
+                            <a class="fragment fade-up" href="http://sinonjs.org/">http://sinonjs.org/</a>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Jest</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Test Runner</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Expectation-Library</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Mock-Library</li>
+                                <li><i class="fa fa-circle"></i> Coverage-Support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Example</h3>
+                        <pre style="width: 100%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+--------------------------------|----------|----------|----------|----------|----------------|
+File                            |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
+--------------------------------|----------|----------|----------|----------|----------------|
+All files                       |      100 |      100 |      100 |      100 |                |
+ components                     |      100 |      100 |      100 |      100 |                |
+  button.jsx                    |      100 |      100 |      100 |      100 |                |
+  header-navigation-element.jsx |      100 |      100 |      100 |      100 |                |
+  svgmap.jsx                    |      100 |      100 |      100 |      100 |                |
+ components/icons               |      100 |      100 |      100 |      100 |                |
+  arrow-down.jsx                |      100 |      100 |      100 |      100 |                |
+  arrow-left.jsx                |      100 |      100 |      100 |      100 |                |
+  thumb.jsx                     |      100 |      100 |      100 |      100 |                |
+ components/logos               |      100 |      100 |      100 |      100 |                |
+  bm.jsx                        |      100 |      100 |      100 |      100 |                |
+  svglogo.jsx                   |      100 |      100 |      100 |      100 |                |
+--------------------------------|----------|----------|----------|----------|----------------|
+                        </code></pre>
+
+                    </section>
+
+                    <section>
+                        <h3>Alternatives</h3>
+
+                        <div style="background-color: #fdf6e3;">
+                            <img class="plain fragment fade-up" src="images/istanbul.png" style="mix-blend-mode: multiply !important;">
+                            <br>
+                            <a class="fragment fade-up" href="https://istanbul.js.org/">https://istanbul.js.org/</a>
+                        </div>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Jest</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Test Runner</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Expectation-Library</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Mock-Library</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Coverage-Support</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Wrap Up</h3>
+
+                        <ul style="text-align: center;">
+                            <li class="fragment fade-up">Great interface for JavaScript tests</li>
+                            <li class="fragment fade-up">Great performance (parallelism, last changed files, filters, ..)</li>
+                            <li class="fragment fade-up">Snapshot tests</li>
+                            <li class="fragment fade-up">All-In-One-Solution</li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section class="center">
+                    <h2>Enzyme</h2>
+
+                    <section>
+                        <ul style="text-align: center;">
+                            <li class="plain fragment fade-up">Render Components</li>
+                            <li class="plain fragment fade-up">Query</li>
+                            <li class="plain fragment fade-up">Simulate Events</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Enzyme</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-circle"></i> Render Components</li>
+                                <li><i class="fa fa-circle-o"></i> Query</li>
+                                <li><i class="fa fa-circle-o"></i> Simulate Events</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Example</h3>
+
+                        <pre style="width: 80%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+import { shallow } from 'enzyme';
+
+const SilverTours = () => {
+  return &lt;div>SilverTours&lt;/div>
+};
+
+it("should render a div with 'SilverTours' as content", () => {
+  <span class="fragment fade-up" data-fragment-index="1">const wrapper = shallow(&lt;SilverTours/>);</span>
+  <span class="fragment fade-up" data-fragment-index="2">expect(wrapper.find('div').html()).toEqual('SilverTours');</span>
+});
+                        </code></pre>
+
+                        <br>
+
+                        <ul>
+                            <li class="fragment fade-up" style="display: inline; padding: 0 20px;"><strong>Shallow Rendering</strong></li>
+                            <li class="fragment fade-up" style="display: inline; padding: 0 20px;"><strong>Full DOM Rendering</strong></li>
+                            <li class="fragment fade-up" style="display: inline; padding: 0 20px;"><strong>Static Rendering</strong></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Enzyme</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Render Components</li>
+                                <li><i class="fa fa-circle"></i> Query</li>
+                                <li><i class="fa fa-circle-o"></i> Simulate Events</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Selectors</h3>
+
+                        <ul style="text-align: center;">
+                            <li class="fragment fade-up">class syntax (<strong>.foo, .foo-bar, ...</strong>)</li>
+                            <li class="fragment fade-up">element syntax (<strong>input, div, span, ...</strong>)</li>
+                            <li class="fragment fade-up">id syntax (<strong>#foo, #foo-bar, ...</strong>)</li>
+                            <li class="fragment fade-up">attribute syntax (<strong>[href="foo"], [type="text"], ...</strong>)</li>
+                        </ul>
+
+                        <pre class="fragment fade-up" style="width: 60%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+const silverToursComponent = wrapper.find(SilverTours);
+                        </code></pre>
+
+                        <a class="fragment fade-up" href="http://airbnb.io/enzyme/docs/api/selector.html">http://airbnb.io/enzyme/docs/api/selector.html</a>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Enzyme</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Render Components</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Query</li>
+                                <li><i class="fa fa-circle"></i> Simulate Events</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Example</h3>
+
+                        <pre class="fragment fade-up" style="width: 60%;"><code style="max-height: 800px;" class="lang-javascript hljs" data-trim data-noescape>
+wrapper.find('a').simulate('click');
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <div class="header">
+                        <div class="header-item">
+                            <h2>Enzyme</h2>
+                        </div>
+
+                        <div class="header-item">
+                            <ul class="map" style="float: left;">
+                                <li><i class="fa fa-check-circle check-green"></i> Render Components</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Query</li>
+                                <li><i class="fa fa-check-circle check-green"></i> Simulate Events</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h3>Wrap Up</h3>
+
+                        <ul style="text-align: center;">
+                            <li class="fragment fade-up">Great addition for component tests</li>
+                            <li class="fragment fade-up">Promotes readability of test</li>
+                            <li class="fragment fade-up">Kind of familiar</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section class="center">
+                    <h1>Jest vs. Enzyme</h1>
+                </section>
+
+                <section class="center" data-transition="zoom">
+                    <h1>Jest & Enzyme</h1>
+                    <span class="fragment fade-up"><strong>thanks</strong></span>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                center: false,
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+
+            Reveal.configure({
+              slideNumber: true,
+              history: true,
+              transition: 'none'
+            });
+        </script>
+    </body>
+</html>
