@@ -55,12 +55,13 @@
                 margin: auto !important;
                 width: 40%;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
             }
 
             .layer-container > ul,
             .layer-container-detail > ul {
                 text-align: center;
+                width: 100%;
             }
 
             .layer-container > ul li,
@@ -71,7 +72,19 @@
             }
 
             .layer-container-detail {
-                font-size: 200% !important;
+                width: 50%;
+                font-size: 200%;
+            }
+
+            .layer-detail {
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .layer-detail-list > li {
+                padding: 0;
+                margin: 0;
             }
         </style>
     </head>
@@ -135,11 +148,41 @@
                         </div>
                     </section>
 
-                    <section class="center" data-transition="zoom">
+                    <section class="center">
+                        <div class="layer-container">
+                            <ul>
+                                <li class="block" style="visibility: hidden;">&nbsp;</li>
+                                <li class="block" style="visibility: hidden;">&nbsp;</li>
+                                <li class="block">Domain</li>
+                                <li class="block">Data-Access</li>
+                                <li class="block" style="visibility: hidden;">&nbsp;</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="center">
+                    <h2>Layers</h2>
+
+                    <section class="center">
                         <div class="layer-container-detail">
                             <ul>
-                                <li style="padding: 20px;">Domain</li>
-                                <li style="padding: 20px;">Data-Access</li>
+                                <li class="block" style="display: flex; justify-content: space-between; padding: 50px;">
+                                    <div style="font-size: 200%; margin: auto 0;">Domain</div>
+                                    <ul class="layer-detail-list">
+                                        <li class="fragment">High-Level</li>
+                                        <li class="fragment">General</li>
+                                        <li class="fragment">Abstract</li>
+                                    </ul>
+                                </li>
+                                <li class="block" style="display: flex; justify-content: space-between; padding: 50px;">
+                                    <div style="font-size: 200%; margin: auto 0;">Data-Access</div>
+                                    <ul class="layer-detail-list">
+                                        <li class="fragment">Low-Level</li>
+                                        <li class="fragment">Specific</li>
+                                        <li class="fragment">Detailed</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </section>
