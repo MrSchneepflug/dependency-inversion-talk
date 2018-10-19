@@ -116,6 +116,12 @@
                 color: #eee8d5;
                 border-radius: 50%;
             }
+
+            .architecture-list,
+            .benefit-list {
+                width: 33%;
+                margin: auto !important;
+            }
         </style>
     </head>
     <body>
@@ -225,28 +231,49 @@
 
                     <section class="center">
 
-                        <div class="infrastructure-circle">
-                            <span style="position: relative; top: 50px;">Infrastructure</span>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <div data-fragment-index="8" class="fragment architecture-list">
+                                <strong>Clean Architecture</strong>
+                                <br>
+                                <strong>Hexagonal Architecture</strong>
+                                <br>
+                                <strong>Onion Architecture</strong>
+                            </div>
 
-                            <div class="undefined-circle">
-                                <span style="position: relative; top: 50px;">&nbsp;</span>
+                            <div>
+                                <div class="infrastructure-circle">
+                                    <span style="position: relative; top: 50px;">Infrastructure</span>
 
-                                <div class="domain-circle">
-                                    <span style="position: relative; top: 90px;">Domain</span>
+                                    <div class="undefined-circle">
+                                        <span style="position: relative; top: 50px;">&nbsp;</span>
+
+                                        <div class="domain-circle">
+                                            <span style="position: relative; top: 90px;">Domain</span>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <i data-fragment-index="3" class="fragment fas fa-long-arrow-alt-right" style="position: absolute; left: 810px; top: 360px; font-size: 200%; color: #859900;"></i>
+                                <i data-fragment-index="4" class="fragment fas fa-long-arrow-alt-right" style="position: absolute; left: 680px; top: 360px; font-size: 200%; color: #859900;"></i>
+
+                                <i data-fragment-index="1" class="fragment fas fa-long-arrow-alt-left" style="position: absolute; left: 1040px; top: 360px; font-size: 200%; color: #859900;"></i>
+                                <i data-fragment-index="5" class="fragment fas fa-long-arrow-alt-left" style="position: absolute; left: 1170px; top: 360px; font-size: 200%; color: #859900;"></i>
+
+                                <i data-fragment-index="2" class="fragment fas fa-long-arrow-alt-up" style="position: absolute; left: 940px; top: 600px; font-size: 200%; color: #859900;"></i>
+
+                                <i data-fragment-index="6" class="fragment fas fa-long-arrow-alt-down" style="position: absolute; left: 940px; top: 490px; font-size: 200%; color: #dc322f;"></i>
+
+                                <h3 data-fragment-index="7" class="fragment" style="position: relative; top: 20px;">Dependency Rule</h3>
+                            </div>
+
+                            <div data-fragment-index="9" class="fragment benefit-list">
+                                <strong>Autonomy</strong>
+                                <br>
+                                <strong>Testability</strong>
+                                <br>
+                                <strong>Maintainability</strong>
                             </div>
                         </div>
-
-                        <i data-fragment-index="3" class="fragment fas fa-long-arrow-alt-right" style="position: absolute; left: 810px; top: 360px; font-size: 200%; color: #859900;"></i>
-                        <i data-fragment-index="4" class="fragment fas fa-long-arrow-alt-right" style="position: absolute; left: 680px; top: 360px; font-size: 200%; color: #859900;"></i>
-
-                        <i data-fragment-index="1" class="fragment fas fa-long-arrow-alt-left" style="position: absolute; left: 1040px; top: 360px; font-size: 200%; color: #859900;"></i>
-                        <i data-fragment-index="5" class="fragment fas fa-long-arrow-alt-left" style="position: absolute; left: 1170px; top: 360px; font-size: 200%; color: #859900;"></i>
-
-                        <i data-fragment-index="2" class="fragment fas fa-long-arrow-alt-up" style="position: absolute; left: 940px; top: 600px; font-size: 200%; color: #859900;"></i>
-
-                        <i data-fragment-index="6" class="fragment fas fa-long-arrow-alt-down" style="position: absolute; left: 940px; top: 490px; font-size: 200%; color: #dc322f;"></i>
-
 
                     </section>
                 </section>
