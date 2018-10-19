@@ -50,21 +50,28 @@
                 line-height: 1.2em !important;
             }
 
-            .layer-container {
+            .layer-container,
+            .layer-container-detail {
                 margin: auto !important;
-                width: 30%;
+                width: 40%;
                 display: flex;
                 flex-direction: column;
             }
 
-            .layer-container > ul {
+            .layer-container > ul,
+            .layer-container-detail > ul {
                 text-align: center;
             }
 
-            .layer-container > ul li {
+            .layer-container > ul li,
+            .layer-container-detail > ul li {
                 margin: 5px;
                 background-color: #268bd2;
                 color: #eee8d5;
+            }
+
+            .layer-container-detail {
+                font-size: 200% !important;
             }
         </style>
     </head>
@@ -84,7 +91,7 @@
                 <section class="center">
                     <h2>Motivation</h2>
 
-                    <section>
+                    <section class="center">
                         <ul style="text-align: center; font-size: 120%;">
                             <li class="block fragment fade-up"><em>"I guess it's the same as Dependency Injection."</em></li>
                             <li class="block fragment fade-up"><em>"It has something to do with Dependency Injection, right?"</em></li>
@@ -97,7 +104,7 @@
                 <section class="center">
                     <h2>Dependency Inversion Principle</h2>
 
-                    <section>
+                    <section class="center">
                         <p class="fragment fade-up">
                             High-level modules should not depend on low-level modules.
                             <br>
@@ -109,20 +116,30 @@
                 <section class="center">
                     <h2>Layers</h2>
 
-                    <section>
+                    <section class="center">
                         <ul style="text-align: center; font-size: 120%;">
                             <li class="block fragment fade-up">Organization</li>
                             <li class="block fragment fade-up">Responsibility</li>
                         </ul>
                     </section>
 
-                    <section>
+                    <section class="center">
                         <div class="layer-container">
                             <ul>
+                                <li class="block fragment fade-up" style="background-color: #6c71c4;"><i class="fas fa-file-import"></i></li>
                                 <li class="block fragment fade-up">Frontend</li>
                                 <li class="block fragment fade-up">Domain</li>
                                 <li class="block fragment fade-up">Data-Access</li>
-                                <li class="block fragment fade-up">Database</li>
+                                <li class="block fragment fade-up" style="background-color: #2aa198;"><i class="fas fa-database"></i></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="center" data-transition="zoom">
+                        <div class="layer-container-detail">
+                            <ul>
+                                <li style="padding: 20px;">Domain</li>
+                                <li style="padding: 20px;">Data-Access</li>
                             </ul>
                         </div>
                     </section>
