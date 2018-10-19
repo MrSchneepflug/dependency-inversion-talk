@@ -45,45 +45,26 @@
                 line-height: 2;
             }
 
-            .header {
-                width: 100%;
-                display: flex;
-            }
-
-            .header-item {
-                width: 50%;
-            }
-
-            .compare-container {
-                display: flex;
-                justify-content: center;
-            }
-
-            .compare-jest-vs-enzyme ul {
-                text-align: center;
-                margin: 0;
-            }
-
-            .compare-item {
-                width: 33%;
-                text-align: center;
-                background-color: #fdf6e3;
-            }
-
-            .brand-icon {
-                width: 100px;
-                height: 100px;
-                border: 0 !important;
-                mix-blend-mode: multiply;
-            }
-
             code {
                 font-size: 1.5em !important;
                 line-height: 1.2em !important;
             }
 
-            .check-green {
-                color: #008020;
+            .layer-container {
+                margin: auto !important;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .layer-container > ul {
+                text-align: center;
+            }
+
+            .layer-container > ul li {
+                margin: 5px;
+                background-color: #268bd2;
+                color: #eee8d5;
             }
         </style>
     </head>
@@ -133,6 +114,17 @@
                             <li class="block fragment fade-up">Organization</li>
                             <li class="block fragment fade-up">Responsibility</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <div class="layer-container">
+                            <ul>
+                                <li class="block fragment fade-up">Frontend</li>
+                                <li class="block fragment fade-up">Domain</li>
+                                <li class="block fragment fade-up">Data-Access</li>
+                                <li class="block fragment fade-up">Database</li>
+                            </ul>
+                        </div>
                     </section>
                 </section>
             </div>
