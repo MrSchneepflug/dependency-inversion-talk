@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>Jest vs. Enzyme - Overview</title>
+        <title>Dependency Inversion Principle</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/solarized.css">
@@ -26,6 +26,10 @@
             ul {
                 list-style-type: none !important;
                 margin: 0 !important;
+            }
+
+            li.block {
+                padding: 20px 0;
             }
 
             ul.map {
@@ -101,10 +105,10 @@
 
                     <section>
                         <ul style="text-align: center; font-size: 120%;">
-                            <li style="padding: 20px 0;" class="fragment fade-up"><em>"I guess it's the same as Dependency Injection."</em></li>
-                            <li style="padding: 20px 0;" class="fragment fade-up"><em>"It has something to do with Dependency Injection, right?"</em></li>
-                            <li style="padding: 20px 0;" class="fragment fade-up"><em>"It probably means you should use Dependency Injection."</em></li>
-                            <li style="padding: 20px 0;" class="fragment fade-up"><em>?</em></li>
+                            <li class="block fragment fade-up"><em>"I guess it's the same as Dependency Injection."</em></li>
+                            <li class="block fragment fade-up"><em>"It has something to do with Dependency Injection, right?"</em></li>
+                            <li class="block fragment fade-up"><em>"It probably means you should use Dependency Injection."</em></li>
+                            <li class="block fragment fade-up"><em>?</em></li>
                         </ul>
                     </section>
                 </section>
@@ -118,6 +122,17 @@
                             <br>
                             Both should depend on abstractions.
                         </p>
+                    </section>
+                </section>
+
+                <section class="center">
+                    <h2>Layers</h2>
+
+                    <section>
+                        <ul style="text-align: center; font-size: 120%;">
+                            <li class="block fragment fade-up">Organization</li>
+                            <li class="block fragment fade-up">Responsibility</li>
+                        </ul>
                     </section>
                 </section>
             </div>
