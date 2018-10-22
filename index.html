@@ -126,6 +126,18 @@
             pre {
                 box-shadow: none !important;
             }
+
+            .uml {
+                font-family: monospace !important;
+                font-size: 0.8em !important;
+                margin: 0 auto !important;
+                width: 700px;
+                border: solid 3px #586E75 !important;
+            }
+
+            .uml hr {
+                border: solid 1px #586E75;
+            }
         </style>
     </head>
     <body>
@@ -318,7 +330,7 @@
                         {
                             public function calculateAction(Request $request)
                             {
-                                return $this->benchmarkCalculator->calculate(...);
+                                return $this->calculator->calculate(...);
                             }
                         }
                         </span>
@@ -340,6 +352,28 @@
                         }
                         </span>
                     </code></pre>
+
+                    </section>
+
+                    <section class="center">
+
+                        <div class="uml">
+                            <strong>BenchmarkController</strong>
+                            <hr>
+                            - calculator: BenchmarkCalculator
+                            <hr>
+                            + calculateAction(...): string
+                        </div>
+
+                        <div style="text-align: right; color: #2aa198;"><strong>Infrastructure</strong></div>
+                        <hr style="border: 10px dashed;">
+                        <div style="text-align: right; color: #6c71c4;"><strong>Domain</strong></div>
+
+                        <div class="uml">
+                            <strong>BenchmarkCalculator</strong>
+                            <hr>
+                            + calculate(...): float
+                        </div>
 
                     </section>
                 </section>
