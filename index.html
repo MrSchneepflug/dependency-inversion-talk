@@ -430,6 +430,47 @@
                     </code></pre>
                     </section>
                 </section>
+
+                <section class="center">
+
+                    <div style="width: 100%; display: flex;">
+                        <div class="uml" style="font-size: 0.6em !important; width: 550px;">
+                            <strong>BenchmarkController</strong>
+                            <hr>
+                            - calculator: BenchmarkCalculator
+                            <hr>
+                            + calculateAction(...): string
+                        </div>
+
+                        <div data-fragment-index="1" class="fragment uml" style="font-size: 0.6em !important; width: 550px;">
+                            <strong>Swift_Mailer</strong>
+                            <hr>
+                            + send(Swift_Message): void
+                        </div>
+                    </div>
+
+                    <div style="text-align: right; color: #2aa198;"><strong>Infrastructure</strong></div>
+                    <hr style="border: 10px dashed;">
+                    <div style="text-align: right; color: #6c71c4;"><strong>Domain</strong></div>
+
+                    <div class="uml" style="font-size: 0.6em !important; width: 550px;">
+                        <strong>BenchmarkCalculator</strong>
+                        <hr>
+                        + calculate(...): float
+                    </div>
+
+                    <i class="fas fa-level-down-alt" style="position: absolute; left: 772px; top: 281px; font-size: 480%; color: #586E75;"></i>
+                    <i data-fragment-index="2" class="fragment fas fa-level-up-alt" style="position: absolute; left: 1252px; top: 306px; font-size: 480%; color: #DC322F;"></i>
+
+                    <strong data-fragment-index="3" class="fragment fade-up" style="color: #dc322f;">Dependency Inversion Principle Violation</strong>
+                    <br>
+                    <strong data-fragment-index="4" class="fragment fade-up" style="color: #dc322f;">
+                        High-Level Module
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                        Low-Level Module
+                    </strong>
+
+                </section>
             </div>
         </div>
 
