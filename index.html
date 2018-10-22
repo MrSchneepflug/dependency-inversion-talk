@@ -548,6 +548,54 @@
                         <i data-fragment-index="2" class="fragment fas fa-long-arrow-alt-down" style="position: absolute; left: 1410px; top: 294px; font-size: 480%; color: #586E75;"></i>
 
                     </section>
+
+                    <section class="center">
+                        <div style="width: 100%; display: flex;">
+                            <div class="uml" style="font-size: 0.6em !important; width: 550px;">
+                                <strong>BenchmarkController</strong>
+                                <hr>
+                                - calculator: BenchmarkCalculator
+                                <hr>
+                                + calculateAction(...): string
+                            </div>
+
+                            <div class="uml" style="min-height: 100px !important; font-size: 0.6em !important; width: 550px;">
+                                <strong>Swift_Mailer</strong>
+                                <hr>
+                                + send(Swift_Message): void
+                            </div>
+
+                            <div class="uml" style="min-height: 100px !important; font-size: 0.6em !important; width: 550px;">
+                                <strong>MailerAdapter</strong>
+                                <hr>
+                                + send(...): void
+                            </div>
+                        </div>
+
+                        <div style="text-align: right; color: #2aa198;"><strong>Infrastructure</strong></div>
+                        <hr style="border: 10px dashed;">
+                        <div style="text-align: right; color: #6c71c4;"><strong>Domain</strong></div>
+
+                        <div style="width: 100%; display: flex;">
+                            <div class="uml" style="font-size: 0.6em !important; width: 550px;">
+                                <strong>BenchmarkCalculator</strong>
+                                <hr>
+                                + calculate(...): float
+                            </div>
+
+                            <div class="uml" style="font-size: 0.6em !important; width: 550px;">
+                                <strong style="font-style: italic;"><< Notifier >></strong>
+                                <hr>
+                                <span style="font-style: italic;">+ notify(...): void</span>
+                            </div>
+                        </div>
+
+                        <i class="fas fa-long-arrow-alt-down" style="position: absolute; left: 414px; top: 294px; font-size: 480%; color: #586E75;"></i>
+                        <i class="fas fa-long-arrow-alt-right" style="position: absolute; left: 870px; top: 520px; font-size: 480%; color: #586E75;"></i>
+                        <i class="fas fa-long-arrow-alt-down" style="position: absolute; left: 1410px; top: 294px; font-size: 480%; color: #586E75;"></i>
+                        <i class="fas fa-long-arrow-alt-left" style="position: absolute; left: 1190px; top: 80px; font-size: 480%; color: #586E75;"></i>
+
+                    </section>
                 </section>
             </div>
         </div>
