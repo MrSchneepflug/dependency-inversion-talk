@@ -537,9 +537,9 @@
                             </div>
 
                             <div data-fragment-index="1" class="fragment uml" style="font-size: 0.6em !important; width: 550px;">
-                                <strong style="font-style: italic;"><< Notifier >></strong>
+                                <strong style="font-style: italic;"><< Mailer >></strong>
                                 <hr>
-                                <span style="font-style: italic;">+ notify(...): void</span>
+                                <span style="font-style: italic;">+ send(...): void</span>
                             </div>
                         </div>
 
@@ -566,7 +566,9 @@
                             </div>
 
                             <div class="uml" style="min-height: 100px !important; font-size: 0.6em !important; width: 550px;">
-                                <strong>MailerAdapter</strong>
+                                <strong>SwiftMailerAdapter</strong>
+                                <hr>
+                                - mailer: Swift_Mailer
                                 <hr>
                                 + send(...): void
                             </div>
@@ -584,9 +586,9 @@
                             </div>
 
                             <div class="uml" style="font-size: 0.6em !important; width: 550px;">
-                                <strong style="font-style: italic;"><< Notifier >></strong>
+                                <strong style="font-style: italic;"><< Mailer >></strong>
                                 <hr>
-                                <span style="font-style: italic;">+ notify(...): void</span>
+                                <span style="font-style: italic;">+ send(...): void</span>
                             </div>
                         </div>
 
