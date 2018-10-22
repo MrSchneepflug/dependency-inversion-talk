@@ -381,6 +381,24 @@
 
                     </section>
                 </section>
+
+                <section class="center">
+                    <h2>New Requirement</h2>
+
+                    <section class="center">
+                        <pre style="width: 75%;"><code style="max-height: 800px;" class="lang-gherkin hljs" data-trim data-noescape>
+                        <span class="fragment" data-fragment-index="1">Feature: Rating-Alerts</span>
+                          <span class="fragment" data-fragment-index="2">In order to keep track of the benchmark
+                          As a product manager
+                          I need to know if offers will be rated too high/low</span>
+
+                          <span class="fragment" data-fragment-index="3">Scenario: GoldCar in Spain is rated too high</span>
+                            <span class="fragment" data-fragment-index="4">Given The the benchmark-algorithm rates an offer of "GoldCar" in "Spain"
+                            And The benchmark is at least "7.0" (Good)
+                            Then A warning-email should be sent to "productmanagement@billiger-mietwagen.de"</span>
+                    </code></pre>
+                    </section>
+                </section>
             </div>
         </div>
 
