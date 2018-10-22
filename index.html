@@ -312,8 +312,8 @@
                     <section class="center">
 
                         <pre style="width: 60%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
-                        namespace Infrastructure;
-
+                        <span class="fragment" data-fragment-index="3">namespace Infrastructure;</span>
+                        <span class="fragment" data-fragment-index="4">
                         class BenchmarkController
                         {
                             public function calculateAction(Request $request)
@@ -321,6 +321,7 @@
                                 return $this->benchmarkCalculator->calculate(...);
                             }
                         }
+                        </span>
                     </code></pre>
 
                         <div style="text-align: right; color: #2aa198;"><strong>Infrastructure</strong></div>
@@ -328,8 +329,8 @@
                         <div style="text-align: right; color: #6c71c4;"><strong>Domain</strong></div>
 
                         <pre style="width: 60%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
-                        namespace Domain;
-
+                        <span class="fragment" data-fragment-index="1">namespace Domain;</span>
+                        <span class="fragment" data-fragment-index="2">
                         class BenchmarkCalculator
                         {
                             public function calculate(...)
@@ -337,6 +338,7 @@
                                 return ...
                             }
                         }
+                        </span>
                     </code></pre>
 
                     </section>
