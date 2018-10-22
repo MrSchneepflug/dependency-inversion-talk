@@ -399,6 +399,37 @@
                     </code></pre>
                     </section>
                 </section>
+
+                <section class="center">
+                    <h2>New Requirement</h2>
+
+                    <section class="center">
+                        <pre style="width: 70%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        namespace Domain;
+
+                        class BenchmarkCalculator
+                        {
+                            <span class="fragment" data-fragment-index="2">public function __construct(\Swift_Mailer $mailer)
+                            {
+                                $this->mailer = $mailer;
+                            }</span>
+
+                            public function calculate(Offer $offer)
+                            {
+                                // business-logic which rates the offer ...
+
+                                <span class="fragment" data-fragment-index="1">if ($offer->supplier === "GoldCar" && $offer->rating > 6.9) {</span>
+                                    <span class="fragment" data-fragment-index="3">$message = new \Swift_Message();
+                                    $message->setTo("productmanagement@billiger-mietwagen.de");
+                                    $message->setBody("GoldCar has been rated too good ... again ...");</span>
+
+                                    <span class="fragment" data-fragment-index="4">$this->mailer->send($message);</span>
+                                <span class="fragment" data-fragment-index="1">}</span>
+                            }
+                        }
+                    </code></pre>
+                    </section>
+                </section>
             </div>
         </div>
 
