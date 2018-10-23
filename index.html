@@ -599,6 +599,64 @@
 
                     </section>
                 </section>
+
+                <section class="center">
+                    <h2>BenchmarkCalculator</h2>
+
+                    <section class="center">
+                        <pre style="width: 70%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        namespace Domain;
+
+                        class BenchmarkCalculator
+                        {
+                            public function __construct(\Swift_Mailer $mailer)
+                            {
+                                $this->mailer = $mailer;
+                            }
+
+                            public function calculate(Offer $offer)
+                            {
+                                // business-logic which rates the offer ...
+
+                                if ($offer->supplier === "GoldCar" && $offer->rating > 6.9) {
+                                    $message = new \Swift_Message();
+                                    $message->setTo("productmanagement@billiger-mietwagen.de");
+                                    $message->setBody("GoldCar has been rated too good ... again ...");
+
+                                    $this->mailer->send($message);
+                                }
+                            }
+                        }
+                    </code></pre>
+                    </section>
+
+                    <section class="center">
+                        <pre style="width: 70%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        namespace Domain;
+
+                        class BenchmarkCalculator
+                        {
+                            public function __construct(Mailer $mailer)
+                            {
+                                $this->mailer = $mailer;
+                            }
+
+                            public function calculate(Offer $offer)
+                            {
+                                // business-logic which rates the offer ...
+
+                                if ($offer->supplier === "GoldCar" && $offer->rating > 6.9) {
+
+                                    $recipient = "productmanagement@billiger-mietwagen.de";
+                                    $message = "GoldCar has been rated too good ... again ...";
+
+                                    $this->mailer->send($recipient, $message);
+                                }
+                            }
+                        }
+                    </code></pre>
+                    </section>
+                </section>
             </div>
         </div>
 
