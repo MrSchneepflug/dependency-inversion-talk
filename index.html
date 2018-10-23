@@ -678,26 +678,26 @@
 
                     <section class="center">
                         <pre style="width: 50%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
-                        namespace Infrastructure;
+                        <span class="fragment" data-fragment-index="1">namespace Infrastructure;</span>
 
-                        use Domain\Mailer;
+                        <span class="fragment" data-fragment-index="4">use Domain\Mailer;</span>
 
-                        class SwiftMailerAdapter implements Mailer
-                        {
-                            public function __construct(\Swift_Mailer $mailer)
+                        <span class="fragment" data-fragment-index="2">class SwiftMailerAdapter</span> <span class="fragment" data-fragment-index="4">implements Mailer</span>
+                        <span class="fragment" data-fragment-index="2">{</span>
+                            <span class="fragment" data-fragment-index="3">public function __construct(\Swift_Mailer $mailer)
                             {
                                 $this->mailer = $mailer;
-                            }
+                            }</span>
 
-                            public function send($recipient, $message)
-                            {
-                                $swiftMessage = new \Swift_Message();
+                            <span class="fragment" data-fragment-index="5">public function send($recipient, $message)
+                            {</span>
+                                <span class="fragment" data-fragment-index="6">$swiftMessage = new \Swift_Message();
                                 $message->setTo($recipient);
-                                $message->setBody($message);
+                                $message->setBody($message);</span>
 
-                                $this->mailer->send($swiftMessage);
-                            }
-                        }
+                                <span class="fragment" data-fragment-index="7">$this->mailer->send($swiftMessage);</span>
+                            <span class="fragment" data-fragment-index="5">}</span>
+                        <span class="fragment" data-fragment-index="2">}</span>
                     </code></pre>
                     </section>
                 </section>
