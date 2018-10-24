@@ -722,18 +722,20 @@
                                 </div>
                             </div>
 
-                            <div style="display: flex; flex-direction: column;">
+                            <div class="fragment" style="display: flex; flex-direction: column;">
                                 <div class="uml" style="margin: auto !important;">
-                                    << Mailer >>
+                                    <strong style="font-style: italic;"><< Mailer >></strong>
                                     <hr>
                                     <span style="font-style: italic;">+ send(...)</span>
                                 </div>
 
                                 <div class="uml" style="margin: auto !important;">
-                                    << SwiftMailerAdapter >>
+                                    <strong><< SwiftMailerAdapter >></strong>
                                     <hr>
                                     + send(...)
                                 </div>
+
+                                <i class="fas fa-long-arrow-alt-up" style="position: absolute; left: 1520px; top: 344px; font-size: 260%; color: #586E75;"></i>
                             </div>
                         </div>
                     </section>
