@@ -710,14 +710,30 @@
                     <h2>Autonomy</h2>
 
                     <section class="center">
-                        <div class="infrastructure-circle" style="background-color: #6c71c4;">
-                            <span style="position: relative; top: 50px;">Domain</span>
+                        <div style="display: flex">
+                            <div class="infrastructure-circle" style="background-color: #6c71c4;">
+                                <span style="position: relative; top: 50px;">Domain</span>
 
-                            <div class="center" style="position: relative; top: 240px;">
-                                <span style="border: 4px solid; padding: 5px;"><strong>BenchmarkCalculator</strong></span>
-                                <br><br><br>
-                                <span style="border: 4px solid; padding: 5px;"><strong style="font-style: italic;"><< Mailer >></strong></span>
-                                <i class="fas fa-long-arrow-alt-down" style="position: absolute; top: 85px; left: 370px;"></i>
+                                <div class="center" style="position: relative; top: 240px;">
+                                    <span style="border: 4px solid; padding: 5px;"><strong>BenchmarkCalculator</strong></span>
+                                    <br><br><br>
+                                    <span style="border: 4px solid; padding: 5px;"><strong style="font-style: italic;"><< Mailer >></strong></span>
+                                    <i class="fas fa-long-arrow-alt-down" style="position: absolute; top: 85px; left: 370px;"></i>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column;">
+                                <div class="uml" style="margin: auto !important;">
+                                    << Mailer >>
+                                    <hr>
+                                    <span style="font-style: italic;">+ send(...)</span>
+                                </div>
+
+                                <div class="uml" style="margin: auto !important;">
+                                    << SwiftMailerAdapter >>
+                                    <hr>
+                                    + send(...)
+                                </div>
                             </div>
                         </div>
                     </section>
