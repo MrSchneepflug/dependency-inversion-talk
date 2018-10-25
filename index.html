@@ -711,7 +711,7 @@
 
                     <section class="center">
                         <div style="display: flex">
-                            <div class="infrastructure-circle" style="background-color: #6c71c4;">
+                            <div data-fragment-index="1" class="fragment infrastructure-circle" style="background-color: #6c71c4;">
                                 <span style="position: relative; top: 50px;">Domain</span>
 
                                 <div class="center" style="position: relative; top: 240px;">
@@ -722,25 +722,25 @@
                                 </div>
                             </div>
 
-                            <div data-fragment-index="1" class="fragment" style="display: flex; flex-direction: column;">
+                            <div data-fragment-index="2" class="fragment" style="display: flex; flex-direction: column;">
                                 <div class="uml" style="margin: auto !important;">
                                     <strong style="font-style: italic;"><< Mailer >></strong>
                                     <hr>
                                     <span style="font-style: italic;">+ send(...)</span>
                                 </div>
 
-                                <div data-fragment-index="2" class="fragment" style="margin: auto !important;">
+                                <div data-fragment-index="3" class="fragment" style="margin: auto !important;">
                                     <div class="uml">
-                                        <strong data-fragment-index="2" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="3" class="fragment fade-out"><< SwiftMailerAdapter >></span>
-                                        </strong>
                                         <strong data-fragment-index="3" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="4" class="fragment fade-out"><< CarMailerAdapter >></span>
+                                            <span data-fragment-index="4" class="fragment fade-out"><< SwiftMailerAdapter >></span>
                                         </strong>
                                         <strong data-fragment-index="4" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="5" class="fragment fade-out"><< RoflMailerAdapter >></span>
+                                            <span data-fragment-index="5" class="fragment fade-out"><< CarMailerAdapter >></span>
                                         </strong>
-                                        <strong data-fragment-index="5" class="fragment fade-in">
+                                        <strong data-fragment-index="5" class="fragment fade-in" style="position: absolute;">
+                                            <span data-fragment-index="6" class="fragment fade-out"><< RoflMailerAdapter >></span>
+                                        </strong>
+                                        <strong data-fragment-index="6" class="fragment fade-in">
                                             <span><< #YoloMailerAdapter >></span>
                                         </strong>
                                         <hr>
@@ -748,7 +748,7 @@
                                     </div>
                                 </div>
 
-                                <i data-fragment-index="2" class="fragment fas fa-long-arrow-alt-up" style="position: absolute; left: 1520px; top: 344px; font-size: 260%; color: #586E75;"></i>
+                                <i data-fragment-index="3" class="fragment fas fa-long-arrow-alt-up" style="position: absolute; left: 1520px; top: 344px; font-size: 260%; color: #586E75;"></i>
                             </div>
                         </div>
                     </section>
