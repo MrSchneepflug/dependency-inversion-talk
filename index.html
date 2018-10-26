@@ -758,19 +758,19 @@
                     <h2>Testability</h2>
 
                     <section class="center">
-                        <pre style="width: 70%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        <pre style="width: 60%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
                         class BenchmarkCalculatorTest
                         {
                             public function itShouldSendAnEmailIfGoldCarIsRatedTooHigh()
                             {
-                                $offer = new Offer();
-                                $offer->supplier = "GoldCar";
+                                <span data-fragment-index="1" class="fragment">$offer = new Offer();
+                                $offer->supplier = "GoldCar";</span>
 
-                                $mailerImplementation = Mockery::Mock("Domain\Mailer");
-                                $mailerImplementation->shouldReceive("send");
+                                <span data-fragment-index="3" class="fragment">$mailerImplementation = Mockery::mock("Domain\Mailer");
+                                $mailerImplementation->shouldReceive("send");</span>
 
-                                $calculator = new BenchmarkCalculator($mailerImplementation);
-                                $calculator->calculate(...);
+                                <span data-fragment-index="2" class="fragment">$calculator = new BenchmarkCalculator(</span><span data-fragment-index="3" class="fragment">$mailerImplementation</span><span data-fragment-index="2" class="fragment">);</span>
+                                <span data-fragment-index="2" class="fragment">$calculator->calculate($offer);</span>
                             }
                         }
                     </code></pre>
