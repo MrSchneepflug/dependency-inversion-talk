@@ -376,7 +376,7 @@
 
                     </section>
 
-                    <section class="center">
+                    <section class="center" data-transition="none">
 
                         <div class="uml">
                             <strong>BenchmarkController</strong>
@@ -675,10 +675,25 @@
                 </section>
 
                 <section class="center">
+                    <h2>Mailer</h2>
+
+                    <section class="center">
+                        <pre class="fragment" style="width: 40%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        namespace Domain;
+
+                        interface Mailer
+                        {
+                            public function send($recipient, $message);
+                        }
+                    </code></pre>
+                    </section>
+                </section>
+
+                <section class="center">
                     <h2>BenchmarkCalculator</h2>
 
                     <section class="center">
-                        <pre style="width: 70%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        <pre class="fragment" style="width: 70%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
                         namespace Domain;
 
                         class BenchmarkCalculator
@@ -727,21 +742,6 @@
                                     $this->mailer->send($recipient, $message);
                                 }
                             }
-                        }
-                    </code></pre>
-                    </section>
-                </section>
-
-                <section class="center">
-                    <h2>Mailer</h2>
-
-                    <section class="center">
-                        <pre style="width: 40%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
-                        namespace Domain;
-
-                        interface Mailer
-                        {
-                            public function send($recipient, $message);
                         }
                     </code></pre>
                     </section>
