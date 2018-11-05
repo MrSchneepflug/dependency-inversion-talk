@@ -851,22 +851,22 @@
                     <h2>Testability</h2>
 
                     <section class="center">
-                        <pre style="width: 60%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
+                        <div data-fragment-index="1" class="fragment"><pre style="width: 60%;"><code style="max-height: 800px;" class="lang-php hljs" data-trim data-noescape>
                         class BenchmarkCalculatorTest
                         {
                             public function itShouldSendAnEmailIfGoldCarIsRatedTooHigh()
                             {
-                                <span data-fragment-index="1" class="fragment">$offer = new Offer();
+                                <span data-fragment-index="2" class="fragment">$offer = new Offer();
                                 $offer->supplier = "GoldCar";</span>
 
-                                <span data-fragment-index="3" class="fragment">$mailerImplementation = Mockery::mock("Domain\Mailer");
+                                <span data-fragment-index="4" class="fragment">$mailerImplementation = Mockery::mock("Domain\Mailer");
                                 $mailerImplementation->shouldReceive("send");</span>
 
-                                <span data-fragment-index="2" class="fragment">$calculator = new BenchmarkCalculator(</span><span data-fragment-index="3" class="fragment">$mailerImplementation</span><span data-fragment-index="2" class="fragment">);</span>
-                                <span data-fragment-index="2" class="fragment">$calculator->calculate($offer);</span>
+                                <span data-fragment-index="3" class="fragment">$calculator = new BenchmarkCalculator(</span><span data-fragment-index="4" class="fragment">$mailerImplementation</span><span data-fragment-index="3" class="fragment">);</span>
+                                <span data-fragment-index="3" class="fragment">$calculator->calculate($offer);</span>
                             }
                         }
-                    </code></pre>
+                    </code></pre></div>
                     </section>
                 </section>
 
