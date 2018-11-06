@@ -796,9 +796,9 @@
                                     <br><br><br>
                                     <span style="border: 4px solid; padding: 5px;">
                                         <strong style="position: absolute;">
-                                            <span data-fragment-index="7" class="fragment fade-out" style="font-style: italic;"><< Mailer >></span>
+                                            <span data-fragment-index="6" class="fragment fade-out" style="font-style: italic;"><< Mailer >></span>
                                         </strong>
-                                        <strong data-fragment-index="7" class="fragment fade-in">
+                                        <strong data-fragment-index="6" class="fragment fade-in">
                                             <span style="font-style: italic;"><< Notifier >></span>
                                         </strong>
                                     </span>
@@ -810,9 +810,9 @@
                                 <div class="uml" style="margin: auto !important;">
                                     <span>
                                         <strong style="position: absolute;">
-                                            <span data-fragment-index="7" class="fragment fade-out" style="font-style: italic;"><< Mailer >></span>
+                                            <span data-fragment-index="6" class="fragment fade-out" style="font-style: italic;"><< Mailer >></span>
                                         </strong>
-                                        <strong data-fragment-index="7" class="fragment fade-in">
+                                        <strong data-fragment-index="6" class="fragment fade-in">
                                             <span style="font-style: italic;"><< Notifier >></span>
                                         </strong>
                                     </span>
@@ -823,20 +823,30 @@
                                 <div data-fragment-index="3" class="fragment" style="margin: auto !important;">
                                     <div class="uml">
                                         <strong data-fragment-index="3" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="4" class="fragment fade-out"><< SwiftMailerAdapter >></span>
+                                            <span data-fragment-index="4" class="fragment fade-out">SwiftMailerAdapter</span>
                                         </strong>
                                         <strong data-fragment-index="4" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="5" class="fragment fade-out"><< PHPMailerAdapter >></span>
+                                            <span data-fragment-index="5" class="fragment fade-out">PHPMailerAdapter</span>
                                         </strong>
                                         <strong data-fragment-index="5" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="6" class="fragment fade-out"><< CarMailerAdapter >></span>
+                                            <span data-fragment-index="6" class="fragment fade-out">CarMailerAdapter</span>
                                         </strong>
-                                        <strong data-fragment-index="6" class="fragment fade-in" style="position: absolute;">
-                                            <span data-fragment-index="7" class="fragment fade-out"><< #YoloMailerAdapter >></span>
+                                        <strong data-fragment-index="6" class="fragment fade-in">
+                                            <span>SlackNotifierAdapter</span>
                                         </strong>
-                                        <strong data-fragment-index="7" class="fragment fade-in">
-                                            <span><< SlackNotifierAdapter >></span>
-                                        </strong>
+                                        <hr>
+                                        <span data-fragment-index="3" class="fragment fade-in" style="position: absolute;">
+                                            <span data-fragment-index="4" class="fragment fade-out">- mailer: Swift_Mailer</span>
+                                        </span>
+                                        <span data-fragment-index="4" class="fragment fade-in" style="position: absolute;">
+                                            <span data-fragment-index="5" class="fragment fade-out">- mailer: PHPMailer</span>
+                                        </span>
+                                        <span data-fragment-index="5" class="fragment fade-in" style="position: absolute; right: 80px">
+                                            <span data-fragment-index="6" class="fragment fade-out">- mailer: CarMailerMailCarMail</span>
+                                        </span>
+                                        <span data-fragment-index="6" class="fragment fade-in">
+                                            <span>notifier: SlackClient</span>
+                                        </span>
                                         <hr>
                                         + send($recipient, $message)
                                     </div>
