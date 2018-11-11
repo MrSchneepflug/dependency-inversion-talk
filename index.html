@@ -297,11 +297,17 @@
                             <br>
                             - Frontend-Layer: Welches Template; was wird gebraucht (Select-Station)
                             <br>
+                            -- nutzt Domain-Layer: was wird angezeigt und wie?
+                            <br>
                             - Domain-Layer: Business-Regeln; was darf angezeigt werden (ERV Enterprise SS)
                             <br>
-                            - Data-Access-Layer: Abstraktionsschicht für Datenzugriff (ERV Welche Versicherungen gibt es)
+                            -- nutzt Persistence-Layer: welche Daten zeige ich an?
+                            <br>
+                            - Persistence-Layer: Abstraktionsschicht für Datenzugriff (ERV Welche Versicherungen gibt es)
                             <br>
                             - letztendlich: Datenbank
+                            <br>
+                            - möchte 2 Layer im Detail sehen: Domain und Data-Access
                         </aside>
                     </section>
                 </section>
@@ -315,17 +321,17 @@
                                 <li class="block" style="display: flex; justify-content: space-between; padding: 50px; background-color: #6c71c4;">
                                     <div style="font-size: 200%; margin: auto 0;">Domain</div>
                                     <ul class="layer-detail-list">
-                                        <li data-fragment-index="1" class="fragment">High-Level</li>
+                                        <li data-fragment-index="1" class="fragment">Abstract</li>
                                         <li data-fragment-index="2" class="fragment">General</li>
-                                        <li data-fragment-index="3" class="fragment">Abstract</li>
+                                        <li data-fragment-index="3" class="fragment">High-Level</li>
                                     </ul>
                                 </li>
                                 <li class="block" style="display: flex; justify-content: space-between; padding: 50px; background-color: #2aa198;">
                                     <div style="font-size: 200%; margin: auto 0;">Persistence</div>
                                     <ul class="layer-detail-list">
-                                        <li data-fragment-index="1" class="fragment">Low-Level</li>
+                                        <li data-fragment-index="1" class="fragment">Detailed</li>
                                         <li data-fragment-index="2" class="fragment">Specific</li>
-                                        <li data-fragment-index="3" class="fragment">Detailed</li>
+                                        <li data-fragment-index="3" class="fragment">Low-Level</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -342,6 +348,16 @@
                             <i class="fas fa-long-arrow-alt-right"></i>
                             Low-Level Module
                         </strong>
+
+                        <aside class="center">
+                            - Domain-Layer: Konzepte, Business-Regeln; Persistence-Layer: sehr detailliert (wie genau hole ich Daten)
+                            <br>
+                            - Domain-Layer: sehr allgemein, technologie-agnostisch; Persistence-Layer: muss spezifisch und genau sein
+                            <br>
+                            - Domain-Layer: High-Level; Persistence-Layer: Low-Level
+                            <br><br>
+                            - Genau da liegt das Problem: Domain-Layer nutzt Persistence-Layer
+                        </aside>
                     </section>
                 </section>
 
