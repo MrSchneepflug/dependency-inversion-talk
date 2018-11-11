@@ -944,6 +944,10 @@
                             public function send($recipient, $message);
                         }
                     </code></pre>
+
+                        <aside class="notes">
+                            - ohne Worte ...
+                        </aside>
                     </section>
                 </section>
 
@@ -975,6 +979,10 @@
                             }
                         }
                     </code></pre>
+
+                        <aside class="notes">
+                            - Hier müssen wir nun unser Interface benutzen
+                        </aside>
                     </section>
 
                     <section class="center">
@@ -1002,6 +1010,12 @@
                             }
                         }
                     </code></pre>
+
+                        <aside class="notes">
+                            - löst sich in Wohlgefallen auf
+                            <br>
+                            - hässlichen Swift-Mailer-Details verschwinden
+                        </aside>
                     </section>
                 </section>
 
@@ -1031,6 +1045,16 @@
                             <span class="fragment" data-fragment-index="5">}</span>
                         <span class="fragment" data-fragment-index="2">}</span>
                     </code></pre>
+
+                        <aside class="notes">
+                            - wir brauchen das zu adaptierende Objekt
+                            <br>
+                            - dann brauchen wir das Interface, auf das wir adaptieren wollen; aus unserem Domain-Layer
+                            <br>
+                            - Interface gibt uns vor, was wir brauchen
+                            <br>
+                            - <strong>Hier und genau hier</strong> im SwitfMailerAdapter kommen die hässlichen Swift_Message-Details
+                        </aside>
                     </section>
                 </section>
 
