@@ -159,6 +159,8 @@
                         <br>
                         - Auszug meiner Learnings; keine Garantie auf Vollständigkeit; größte Mühe auf Korrektheit
                         <br>
+                        - Code-Beispiele in PHP, teils sehr reduziert
+                        <br>
                         - Bisschen über den Tellerrand; kann Dinge stellenweise nur anreißen
                         <br>
                         - Da ich selbst noch lerne würde ich mich über anschließende Diskussion freuen
@@ -460,6 +462,24 @@
                                 </div>
                             </div>
                         </div>
+
+                        <aside class="notes">
+                            - alles sehr theoretisch, daher Beispiel: Benchmark als Microservice
+                            <br>
+                            - Angebote als JSON per HTTP an API, Benchmark zurück
+                            <br>
+                            - Wer Benchmark nicht kennt:
+                            <br>
+                            -- Calculator
+                            <br>
+                            -- hat verschiedene Strategien um Angebot zu bewerten
+                            <br>
+                            -- nimmt Angebot entgegen und wendet Strategien an
+                            <br>
+                            -- gibt dann Bewertung zurück
+                            <br>
+                            - Für das Beispiel spielt die Anzahl Layer keine Rolle
+                        </aside>
                     </section>
 
                     <section class="center">
@@ -470,6 +490,10 @@
                                 <span style="position: relative; top: 90px;">Domain</span>
                             </div>
                         </div>
+
+                        <aside class="notes">
+                            - da ich coden möchte, andere Anordnung
+                        </aside>
                     </section>
 
                     <section class="center" data-transition="fade-in">
@@ -480,7 +504,7 @@
                         {
                             public function calculateAction(Request $request)
                             {
-                                return $this->calculator->calculate(...);
+                                return $this->calculator->calculate($offer);
                             }
                         }
                         </span>
@@ -503,13 +527,21 @@
                         <span class="fragment" data-fragment-index="2">
                         class BenchmarkCalculator
                         {
-                            public function calculate(...)
+                            public function calculate(Offer $offer)
                             {
                                 return ...
                             }
                         }
                         </span>
                     </code></pre>
+
+                        <aside class="notes">
+                            - oberer Teil für Infrastruktur, unterer für Domain
+                            <br>
+                            - mit Domain-Layer anfangen; impliziten Layer explizit machen über Namespace
+                            <br>
+                            - im Infrastruktur-Layer: ebenfalls Namespace; Controller, der HTTP-Request entgegennimmt, Offer Baut und Calculator aufruft
+                        </aside>
 
                     </section>
 
@@ -544,6 +576,14 @@
 
                         <i data-fragment-index="1" class="fragment fas fa-long-arrow-alt-down" style="position: absolute; left: 927px; top: 294px; font-size: 480%; color: #586E75;"></i>
                         <i data-fragment-index="2" class="fragment fas fa-long-arrow-alt-down" style="position: absolute; left: 927px; top: 294px; font-size: 480%; color: #859900;"></i>
+
+                        <aside class="notes">
+                            - anders dargestellt
+                            <br>
+                            - Controller hat Dependency auf Calculator
+                            <br>
+                            - laut Dependency Rule alles super
+                        </aside>
 
                     </section>
                 </section>
