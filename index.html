@@ -1053,13 +1053,21 @@
                             <br>
                             - Interface gibt uns vor, was wir brauchen
                             <br>
-                            - <strong>Hier und genau hier</strong> im SwitfMailerAdapter kommen die hässlichen Swift_Message-Details
+                            - <strong>Hier und genau hier</strong> im SwiftMailerAdapter kommen die hässlichen Swift_Message-Details
+                            <br><br>
+                            - Nur verschoben? Schon, aber: Gartenschlauch in der Küche? Geschirr im Schlafzimmer?
+                            <br>
+                            -- Wenn man Dinge dort anordnet, wo man sie natürlicherweise erwarten würde, erleichtet man vieles
                         </aside>
                     </section>
                 </section>
 
                 <section class="center">
                     <h2>Autonomy, Testability, Maintainability</h2>
+
+                    <aside class="notes">
+                        - Ein paar Worte zu Unabhängigkeit, Testbarkeit und Wartbarkeit
+                    </aside>
                 </section>
 
                 <section class="center">
@@ -1134,6 +1142,22 @@
                                 <i data-fragment-index="3" class="fragment fas fa-long-arrow-alt-up" style="position: absolute; left: 1520px; top: 344px; font-size: 260%; color: #586E75;"></i>
                             </div>
                         </div>
+
+                        <aside class="notes">
+                            - keine Dependencies nach außen
+                            <br>
+                            - ob ich das Mailer-Interface über einen:
+                            <br>
+                            -- Swift-Mailer-Adapter mit einer Swift_Mailer-Implementierung
+                            <br>
+                            -- oder über einen PHP-Mailer-Adapter mit einer PHPMailer-Implementierung
+                            <br>
+                            -- oder über einen CarMailerAdapter ...
+                            <br><br>
+                            - Noch mehr Unabhängigkeit: Warum eigentlich Mail? Warum nicht Benachrichtigung?
+                            <br>
+                            Wahre Unabhängigkeit für meine Domain!
+                        </aside>
                     </section>
                 </section>
 
