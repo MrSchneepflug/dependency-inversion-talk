@@ -725,7 +725,11 @@
                         - Swift-Mailer: ist hier im Infrastruktur-Layer zu sehen; ist 3rd-Party-Lib, also nicht im Namespace;
                         Eigenimplementierung wäre im Infrastruktur-Layer; rein konzeptionell als auch für dieses Diagramm macht es für dieses Diagramm Sinn
                         <br>
+                        - Calculator muss Mail verschicken, also:
+                        <br>
                         - Calculator hat Dependency auf Swift-Mailer
+                        <br><br>
+                        - Wir wollen diese Abhängigkeit umdrehen!
                     </aside>
 
                 </section>
@@ -738,7 +742,8 @@
                         <br>
                         - Erinnerung: Violation könnte uns Unabhängigkeit, Testbarkeit und Wartbarkeit kosten
                         <br>
-                        - Sollte unser Anspruch sein, das unter allen Möglichkeiten zu verhindern
+                        - Sollte unser Anspruch sein und ist auch unsere Verantwortung als Entwickler,
+                        dass wir das unter allen Umständen vermeiden
                     </aside>
                 </section>
 
@@ -787,6 +792,8 @@
                             - Zuerst entfernen wir die Dependency
                             <br>
                             - stattdessen: im Domain-Layer neues Interface, dass Anforderung beschreibt (<strong>was</strong> und nicht <strong>wie</strong>)
+                            <br>
+                            - Davon machen wir den Calculator nun abhängig
                             <br>
                             - dann Interface implementieren; wäre schön, aber 3rd-Party-Lib, nicht in unserer Hand
                             <br>
@@ -853,6 +860,8 @@
                             - Zuerst entfernen wir die Dependency
                             <br>
                             - stattdessen: im Domain-Layer neues Interface, dass Anforderung beschreibt (<strong>was</strong> und nicht <strong>wie</strong>)
+                            <br>
+                            - Davon machen wir den Calculator nun abhängig
                             <br>
                             - dann Interface implementieren; wäre schön, aber 3rd-Party-Lib, nicht in unserer Hand
                             <br>
@@ -929,6 +938,8 @@
                             - Zuerst entfernen wir die Dependency
                             <br>
                             - stattdessen: im Domain-Layer neues Interface, dass Anforderung beschreibt (<strong>was</strong> und nicht <strong>wie</strong>)
+                            <br>
+                            - Davon machen wir den Calculator nun abhängig
                             <br>
                             - dann Interface implementieren; wäre schön, aber 3rd-Party-Lib, nicht in unserer Hand
                             <br>
